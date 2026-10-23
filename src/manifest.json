@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "伺服器與後端漏洞安全檢測器 (Web Server & Backend Security Auditor)",
+  "version": "2.2.0",
+  "description": "即時偵測訪問網站使用的 Web 伺服器與後端環境（PHP、Node.js、Apache、Nginx、IIS、Tomcat），精準比對近期重大 CVE 漏洞與提供修復指引。",
+  "permissions": [
+    "webRequest",
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16-red.png",
+      "48": "icons/icon48-red.png",
+      "128": "icons/icon128-red.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16-red.png",
+    "48": "icons/icon48-red.png",
+    "128": "icons/icon128-red.png"
+  },
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
