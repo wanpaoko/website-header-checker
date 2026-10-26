@@ -1,5 +1,7 @@
 # 伺服器與後端漏洞安全檢測器 (Web Server & Backend Security Auditor)
 
+![畫面截圖](screenshot.png)
+
 這是一個基於 **Chrome Extension (Manifest V3)** 的網站安全檢測工具，專門用來在瀏覽網頁時**即時偵測目標網站使用的伺服器與後端環境（PHP、Node.js / Express / Next.js、Apache、Nginx、Microsoft IIS、Apache Tomcat）**，自動辨別暴露的版本標頭，並精準比對近年重大 CVE 漏洞與生命週期終止 (EOL) 狀況，提醒網站管理者與使用者即時防範與修復。
 
 ---
